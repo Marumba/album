@@ -1,0 +1,56 @@
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    text-rendering: optimizelegibility;
+    font-family: 'Open Sans', sans-serif;
+    color: $prime-black;
+}
+
+a,
+p,
+li,
+ol,
+span {
+    color: $prime-black;
+    font-size: 1.4rem;
+}
+
+a {
+    color: $prime-link-color;
+    text-decoration: none;
+    &:visited,
+    &:active {
+        color: $prime-link-color-used;
+    }
+    &:hover {
+        color: $prime-link-color-hover;
+    }
+}
+
+.title {
+    line-height: 32px;
+    color: $prime-black;
+    display: table;
+    margin: 0 auto 24px auto;
+    font-size: 2.2rem;
+    font-weight: 700;
+    @media screen and (max-width: 768px) {
+        line-height: 2.8rem;
+        font-size: 1.8rem;
+        margin: 0 0 15px 0;
+        br {
+            display: none;
+        }
+    }     
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 30px;
+    color: $prime-gray;
+    font-weight: 300;
+}

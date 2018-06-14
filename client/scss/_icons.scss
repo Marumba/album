@@ -1,0 +1,20 @@
+/* ICONS
+------------------------------------*/
+
+.icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &__arrow {
+        width: 20px;
+        height: 20px;
+        &__right {
+            //background-image: url($icon_right_arrow);
+            background-image: url($icons_path + 'icon-arrow-right.svg');
+        }
+    }
+}
+
+/* END ICONS
+------------------------------------*/

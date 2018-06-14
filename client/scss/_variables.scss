@@ -1,0 +1,40 @@
+/* VARIABLES
+------------------------------------*/
+
+$random: random(99999);
+
+/* COLORS
+------------------------------------*/
+
+$prime-black: #292831;
+$prime-white: #fff;
+$prime-gray: #8B8C99;
+$prime-red: #f3123c;
+$secon-black: #4d4c59;
+$secon-gray: #5e5e6c;
+$prime-link-color: #000;
+$prime-link-color-used: $secon-gray;
+$prime-link-color-hover: $secon-gray;
+
+/* END COLORS
+------------------------------------*/
+
+/* IMAGE PATH
+------------------------------------*/
+
+$img_path: "/images/";
+$icons_path: "/images/icons/";
+
+/* END IMAGE PATH
+------------------------------------*/
+
+/* BASE64 ICONS
+------------------------------------*/
+
+$icon_form_checkbox_checked: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5DdXN0b20gUHJlc2V0PC90aXRsZT4gICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+ICAgIDxkZWZzPjwvZGVmcz4gICAgPGcgaWQ9IlBhZ2UtMiIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+ICAgICAgICA8ZyBpZD0iQ3VzdG9tLVByZXNldCIgZmlsbC1ydWxlPSJub256ZXJvIiBmaWxsPSIjRjMxMjNDIj4gICAgICAgICAgICA8cG9seWdvbiBpZD0iaWNvbl9yaWdodC1jb3B5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg5LjUwMDAwMCwgNy4wMDAwMDApIHJvdGF0ZSgtNDUuMDAwMDAwKSB0cmFuc2xhdGUoLTkuNTAwMDAwLCAtNy4wMDAwMDApICIgcG9pbnRzPSI1LjEzODg1Mzg3IDMgMyAzIDMgMTEgMTYgMTAuMDc4MDU0MiAxNS44NDgxNjk3IDcuOTUyMDEyNCA1LjEzODg1Mzg3IDguNzExNTA1NDIiPjwvcG9seWdvbj4gICAgICAgIDwvZz4gICAgPC9nPjwvc3ZnPg==';
+
+/* END BASE64 ICONS
+------------------------------------*/
+
+/* END VARIABLES
+------------------------------------*/

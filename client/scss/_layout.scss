@@ -1,0 +1,64 @@
+/* STRUCTURE
+------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+}
+
+.app {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    margin: 0 auto;
+    background-color: $prime-white;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    position: relative;
+    @media screen and (max-width: 1170px) {
+        width: 1024px;
+    }
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+        padding: 0 20px;
+    }
+    @media screen and (max-width: 768px) {
+        width: calc(100% - 40px);
+        padding: 0;
+    }
+}
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 122px;
+}
+
+.main {
+    &>.container {
+        display: flex;
+    }
+}
+
+.section {
+    width: 100%;
+    display: block;
+    position: relative;
+    .container {
+        display: flex;
+        flex: 1 33%;
+        flex-wrap: wrap;
+    }
+}
+
+/* END STRUCTURE
+------------------------------------*/
