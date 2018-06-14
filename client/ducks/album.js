@@ -74,19 +74,18 @@ export function fetchAlbums() {
 	}
 }
 
-export function fetchAlbum(id) {
+export function fetchAlbum(data) {
 	return (dispatch) => {
-		return axios.get(config.urlAPI)
-			.then((res) => {
-				dispatch({
-					type: FETCH_ALBUM,
-					payload: res.data
-				});			
-			}).catch((err) => {
-				dispatch({
-					type: FETCH_ALBUM_FAILURE,
-					payload: err.stack
-				});
+		if(data){
+			dispatch({
+				type: FETCH_ALBUM,
+				payload: data
+			});			
+		}else{
+			dispatch({
+				type: FETCH_ALBUM_FAILURE,
+				payload: 'Data is missing'
 			});
+		}			
 	}
 }

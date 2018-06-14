@@ -43,20 +43,23 @@
     padding-bottom: 122px;
 }
 
-.main {
-    &>.container {
-        display: flex;
-    }
-}
-
 .section {
     width: 100%;
     display: block;
     position: relative;
-    .container {
+    .container,
+    .row {
         display: flex;
-        flex: 1 33%;
         flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    .row {
+        margin: 0 -10px;
+        &:after {
+            content: "";
+            flex: auto;
+        }
     }
 }
 

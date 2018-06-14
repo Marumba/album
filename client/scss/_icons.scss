@@ -6,13 +6,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    &__arrow {
+    &__close-button {
         width: 20px;
         height: 20px;
-        &__right {
-            //background-image: url($icon_right_arrow);
-            background-image: url($icons_path + 'icon-arrow-right.svg');
-        }
+        background-image: url($icons_path + 'icon-close-button.svg');
     }
 }
 
