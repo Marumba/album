@@ -6,7 +6,7 @@ export default class Section extends Component {
 		if (this.props.title)
 			return (
 				<div className="container">
-					<Card title={this.props.title} />
+					<Card title={this.props.title} type="title" />
 				</div>
 			)
 

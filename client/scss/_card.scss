@@ -56,6 +56,10 @@
             box-shadow: none;
         }
     }
+    &--placeholder {
+        background: #fff;
+        border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+    }
     &__content {
         display: block;
         align-items: center;
@@ -64,6 +68,18 @@
         img {
             display: block;
         }
+    }
+    .bg-animation {
+         animation-duration: 1s;
+         animation-fill-mode: forwards;
+         animation-iteration-count: infinite;
+         animation-name: placeholder;
+         animation-timing-function: linear;
+         background: #f6f7f8;
+         background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+         background-size: 800px 104px;
+         height: 150px;
+         position: relative;
     }
 }
 

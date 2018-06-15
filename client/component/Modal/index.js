@@ -46,6 +46,11 @@ export class Modal extends Component {
 		this.props.dispatch(fetchModal(false))
 	}
 
+	renderTitle(){
+		if (this.props.title)
+			return <div className="modal__title"><p>{this.props.title}</p></div>
+	}
+
 	render() {
 		if (this.state.rendered) {
 			return (
@@ -55,6 +60,7 @@ export class Modal extends Component {
 						<div className="modal__content">
 							<div className="modal__close-button" onClick={this.handleCloseBtnClick.bind(this)}><span className="icon icon__close-button"></span></div>
 							{this.props.children}
+							{this.renderTitle()}
 						</div>
 					</div>
 				</div>

@@ -1,5 +1,5 @@
 
-### A React + Redux solution for Superbid front end test, album app.###
+### A React + Redux solution for Superbid front end test, album app. ###
 
 ### HOW TO USE IT ###
 * npm install

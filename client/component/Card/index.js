@@ -5,11 +5,19 @@ export default class Card extends Component {
 
 	renderCardHolder(){
 		return  (
-			this.props.title 
+			this.props.type == 'title' 
 				? this.renderTitleCard()
-				: this.renderRegularCard()
+				: this.props.type == 'placeholder'
+					? this.renderPlaceholderCard()
+					: this.renderRegularCard()
 		)
 		
+	}
+
+	renderPlaceholderCard(){
+		return (
+			<div className="card card--placeholder"><div className="bg-animation"></div></div>
+		)
 	}
 
 	renderTitleCard(){

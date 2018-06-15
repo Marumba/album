@@ -70,13 +70,23 @@ export class PhotoList extends Component {
     }
     
     handlePhotoClick(id) {
-        const photoURL = this.state.photos[this.state.photos.findIndex((item) => item.id === id)].url;
-        this.setState({ selectedPhoto: photoURL }, () => this.props.dispatch(fetchModal(true)))    
+        const photo = this.state.photos[this.state.photos.findIndex((item) => item.id === id)]
+        this.setState({ selectedPhotoUrl: photo.url, selectedPhotoTitle: photo.title }, () => this.props.dispatch(fetchModal(true)))    
+    }
+
+    cardsPreloader() {
+        const placeholder = []
+        for (let index = 0; index < 12; index++) {
+            placeholder.push(<Card key={index} type="placeholder" />);    
+        }
+        return placeholder;
     }
 
     renderPhotos() {
         if (this.state.photos && this.state.photos.length)
             return this.state.photos.map((item, index) => <Card clickHandler={this.handlePhotoClick} key={index} link={'/album/' + (item.albumId)} id={item.id} thumb={item.thumbnailUrl} />)
+        else
+            return this.cardsPreloader()
     }
 
     render() {
@@ -91,8 +101,8 @@ export class PhotoList extends Component {
                         {this.renderPhotos()}
                     </Section>
                 </main>
-                <Modal show={this.props.modal.show} useOverlay={true}>
-                    <img src={this.state.selectedPhoto} />
+                < Modal show = { this.props.modal.show } useOverlay = { true } title = { this.state.selectedPhotoTitle } >
+                    <img src={this.state.selectedPhotoUrl} />
                 </Modal>
                 <Loader show={this.state.showLoader} > {this.state.loaderMessages} </Loader>
             </Page>

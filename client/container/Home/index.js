@@ -49,9 +49,19 @@ export class Home extends Component {
         })
     }
 
+    cardsPreloader() {
+        const placeholder = []
+        for (let index = 0; index < 12; index++) {
+            placeholder.push(<Card key={index} type="placeholder" />);    
+        }
+        return placeholder;
+    }
+
     renderAlbums() {
         if (this.state.albums && this.state.albums.length)
             return this.state.albums.map((item, index) => <Card key={index} link={'/album/' + (item.albumId)} id={item.albumId} thumb={item.thumbnailUrl} />)
+        else
+            return this.cardsPreloader()
     }
 
     render() {
