@@ -8,6 +8,7 @@ import Card from '../../component/Card';
 import Section from '../../component/Section';
 import Modal from '../../component/Modal';
 import Loader from '../../component/Loader';
+import Placeholder from '../../component/Placeholder';
 
 import { fetchAlbums, fetchAlbum } from '../../ducks/album';
 import { fetchModal } from '../../ducks/modal';
@@ -74,19 +75,11 @@ export class PhotoList extends Component {
         this.setState({ selectedPhotoUrl: photo.url, selectedPhotoTitle: photo.title }, () => this.props.dispatch(fetchModal(true)))    
     }
 
-    cardsPreloader() {
-        const placeholder = []
-        for (let index = 0; index < 12; index++) {
-            placeholder.push(<Card key={index} type="placeholder" />);    
-        }
-        return placeholder;
-    }
-
     renderPhotos() {
         if (this.state.photos && this.state.photos.length)
             return this.state.photos.map((item, index) => <Card clickHandler={this.handlePhotoClick} key={index} link={'/album/' + (item.albumId)} id={item.id} thumb={item.thumbnailUrl} />)
         else
-            return this.cardsPreloader()
+            return <Placeholder quantity="12" />
     }
 
     render() {

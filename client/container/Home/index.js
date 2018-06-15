@@ -7,6 +7,7 @@ import Page from '../../component/Page';
 import Card from '../../component/Card';
 import Section from '../../component/Section';
 import Loader from '../../component/Loader';
+import Placeholder from '../../component/Placeholder';
 
 import { fetchAlbums } from '../../ducks/album';
 
@@ -49,19 +50,11 @@ export class Home extends Component {
         })
     }
 
-    cardsPreloader() {
-        const placeholder = []
-        for (let index = 0; index < 12; index++) {
-            placeholder.push(<Card key={index} type="placeholder" />);    
-        }
-        return placeholder;
-    }
-
     renderAlbums() {
         if (this.state.albums && this.state.albums.length)
             return this.state.albums.map((item, index) => <Card key={index} link={'/album/' + (item.albumId)} id={item.albumId} thumb={item.thumbnailUrl} />)
         else
-            return this.cardsPreloader()
+            return <Placeholder quantity="12" />
     }
 
     render() {
