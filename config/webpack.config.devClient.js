@@ -20,7 +20,31 @@ module.exports = {
   target: "web",
   module: {
     rules: [
-      { test: /\.js?$/, use: "babel-loader", exclude: /node_modules/ },
+      {
+        test: /\.js|jsx$/,
+        use: ["babel-loader"],
+        exclude: /node_modules/
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader'
+          },
+          {
+            loader: 'eslint-loader',
+            options: {
+              failOnWarning: true,
+              failOnError: true,
+              outputReport: {
+                filePath: 'checkstyle.xml',
+                formatter: require('eslint/lib/formatters/checkstyle')
+              }
+            }
+          }
+        ]
+      },
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract({

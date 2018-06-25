@@ -1,7 +1,7 @@
-import albumState from "./ducks/album";
-import modalState from "./ducks/modal";
+import albumState from './ducks/album';
+import modalState from './ducks/modal';
 
 export default {
-	albumState,
-	modalState
+    albumState,
+    modalState
 }
